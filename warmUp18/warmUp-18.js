@@ -17,7 +17,8 @@
             D          500
             M          1,000 
     
-    2. Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+    2. Complete the method/function so that it converts dash/underscore delimited words into camel casing. 
+    The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
         Examples:
 
         toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
@@ -31,3 +32,39 @@
             filter_list([1,'a','b',0,15]) == [1,0,15]
             filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 */
+
+
+// Question 1
+function RomanNumral (romNum){
+    var obj = { I: 1, V: 5, X: 10, L: 50, c: 100, D: 500, M: 1000}
+    var arrR = romNum.split('');
+
+}
+
+// Question 2
+
+function toCamelCase (string){
+    var arr = string.split('');
+    var arr1 = arr.map(function(e, i){
+        if (e==="-"){
+            return arr[i+1].toUpperCase();
+        } else {
+           return  e;
+        }
+    });
+    var str = arr1.join('')
+    return str;
+}
+
+// Questtion 3
+function isNumber(value) {
+    return typeof value === "number";
+  }
+function filter_list (list){
+    var arr = list.filter(function(e, i){
+        isNumber(e)
+    }
+        
+    )
+    return arr;
+}
