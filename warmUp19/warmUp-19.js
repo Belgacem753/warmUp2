@@ -32,7 +32,8 @@ var maxProfit = function(prices) {
      return "max profit = 0"; 
  }
 
-};
+}
+}
 
 function max (array){
   var max = array[0];
