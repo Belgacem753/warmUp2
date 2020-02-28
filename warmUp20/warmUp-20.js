@@ -14,5 +14,4 @@ function reverseStr (str){
     }
 
     return acc.join(' ');
-
 }
