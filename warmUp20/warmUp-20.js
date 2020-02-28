@@ -4,3 +4,15 @@
 //
 //
 // Note : you can`t use any built-in functions .
+
+
+function reverseStr (str){
+    var arr = str.split(' ');
+    var acc = [];
+    for (var i = arr.length-1; i >=0; i--){
+        acc.push(arr[i]);
+    }
+
+    return acc.join(' ');
+
+}
