@@ -16,3 +16,36 @@
 // Constraints:
 // 1 <= text.length <= 10^4
 // text consists of lower case English letters only.
+
+function balloon (string) {
+    var aux = string.split('');
+    var acc = 0;
+    var b = aux.filter(function(e, i){
+        return e ==="b";
+    })
+    var a = aux.filter(function(e, i){
+        return e ==="a";
+    })
+    var l = aux.filter(function(e, i){
+        return e ==="l";
+    })
+    var o = aux.filter(function(e, i){
+        return e ==="o";
+    })
+    var n = aux.filter(function(e, i){
+        return e ==="n";
+    })
+    while (b !== [] && a !== [] && l !== [] && o !== [] && n !== [] ){
+        if (b.length >=1 && a.length >= 1 && n.length >= 1 && o.length >=2 && l.length >= 2){
+            acc += 1;
+            b.slice(1);
+            a.slice(1);
+            l.slice(2);
+            o.slice(2);
+            n.slice(1);
+        } else {
+            acc = acc;
+        }
+        return acc;
+    }
+}
